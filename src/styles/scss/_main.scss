@@ -1,0 +1,92 @@
+$small-margin: 10px;
+$medium-margin: 50px;
+$large-margin: 90px;
+$extra-large-margin: 120px;
+
+#mainGrid {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr;
+}
+
+#mainGrid div {
+  margin-left: $small-margin;
+  margin-right: $small-margin;
+  margin-bottom: 20px;
+  min-height: calc($body-height - 20px);
+}
+
+#mainGrid h3 {
+  max-width: 170px;
+}
+
+#hero {
+  background-image: url("/hero.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  display: none;
+  transition: all 0.5s;
+}
+
+.w-fit {
+  width: fit-content;
+}
+
+.arrow,
+.arrowHover {
+  transform: rotate(-45deg);
+  fill: black;
+}
+
+.arrowHover {
+  fill: $primary;
+}
+
+@media (min-width: 768px) and (max-aspect-ratio: 1/1) {
+  #mainGrid p {
+    display: none;
+  }
+
+  #mainGrid h1,
+  #mainGrid h2 {
+    text-align: center;
+  }
+
+  #mainGrid div ul {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) and (min-aspect-ratio: 1/1) {
+  #mainGrid h1,
+  #mainGrid h2 {
+    text-align: start;
+  }
+
+  #mainGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #mainGrid div {
+    margin-left: $medium-margin;
+    margin-right: $medium-margin;
+  }
+  #hero {
+    display: block;
+  }
+}
+
+@media (min-width: 992px) and (min-aspect-ratio: 1/1) {
+  #mainGrid div {
+    margin-left: $large-margin;
+    margin-right: $large-margin;
+  }
+}
+
+@media (min-width: 1200px) and (min-aspect-ratio: 1/1) {
+  #hero {
+    margin-left: $extra-large-margin;
+    margin-right: $extra-large-margin;
+  }
+}

@@ -1,0 +1,29 @@
+body,
+ul {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  background-color: white;
+}
+
+main {
+  flex-grow: 1;
+  min-height: $body-height;
+  z-index: 5;
+}

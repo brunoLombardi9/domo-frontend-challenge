@@ -1,0 +1,16 @@
+$navbar-height: 100px;
+$body-height: calc(100dvh - $navbar-height);
+
+$primary: #0252f9;
+$success: #93d82b;
+$secondary: #d261e9;
+$info: #acacb3;
+
+$display-font-sizes: (
+  1: 2.1rem,
+  2: 1.89rem,
+  3: 1.68rem,
+  4: 1.47rem,
+  5: 1.26rem,
+  6: 1.05rem,
+);
